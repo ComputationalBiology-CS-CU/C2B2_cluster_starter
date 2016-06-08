@@ -42,7 +42,7 @@ e.g.
 /ifs/scratch/c2b2/ip_lab/sy2515/
 ```
 
-Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land on a computing node (with the same three directories), which supports computation to happen. This also means the login node doesn't support computation, but just some basic file editing operations (because you might not be able to get enough memory in the login node; but you can with command like "qlogin -l mem=32G").
+Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land on a computing node (with the same three directories), which supports computation to happen. This also means the login node doesn't support computation, but just some basic file editing operations (because you might not be able to get enough memory in the login node, but you can with command like "qlogin -l mem=32G").
 
 More frequently used commands in cluster: qlogin, qsub, qstat, qdel. Detailed manual for SGE is [here](http://gridscheduler.sourceforge.net/htmlman/manuals.html).
 
