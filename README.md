@@ -33,7 +33,7 @@ Please fill in this form and email as instructed also cc-ing Prof. Pe'er. He wil
 
 ### 2.1. Working directory
 
-You need to login to the cluster, landing at "home" directory, which is not supposed to be the working directory. Forget about the "data" directory. We are mainly working on "scratch". Though it's reported less secure, but dropping all the scripts/codes/data there is what the lab usually do. So, work there.
+You need to login to the cluster, landing at "home" directory, which is not supposed to be the working directory. Forget about the "data" directory. We are mainly working on "scratch". Though it's reported less secure, but dropping all the scripts/codes/data there is what the lab usually does. So, work there.
 
 e.g.
 ```
@@ -42,7 +42,7 @@ e.g.
 /ifs/scratch/c2b2/ip_lab/sy2515/
 ```
 
-Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land on a computing node, which supports computation to happen. This also means the login node doesn't support computation, but just some basic file editing operations.
+Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land on a computing node (with the same three directories), which supports computation to happen. This also means the login node doesn't support computation, but just some basic file editing operations (because you might not be able to get enough memory in the login node; but you can with command like "qlogin -l mem=32G").
 
 More frequently used commands in cluster: qlogin, qsub, qstat, qdel
 
