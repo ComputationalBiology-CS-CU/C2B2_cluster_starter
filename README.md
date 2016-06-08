@@ -50,7 +50,7 @@ More frequently used commands in cluster: qlogin, qsub, qstat, qdel
 
 The default quota for your "scratch" directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
 
-### 2.4. Job submission scripts
+### 2.3. Job submission scripts
 
 Find the following scripts for your reference. For a more detailed discussion (e.g., running an array job), see [here](http://wiki.c2b2.columbia.edu/arcs/index.php/Cluster_doc).
 
@@ -62,7 +62,7 @@ Find the following scripts for your reference. For a more detailed discussion (e
 Please pay attention to the system memory configuration, and be careful about the memory you are applying. The same for the time you apply. So estimate the approximate running time and memory requirement before submitting your jobs (or submit trial jobs to see how much memory and time is actually needed).
 
 
-### 2.5. Questions?
+### 2.4. Questions?
 
 Please send any question to "rt@c2b2.columbia.edu" **with your uni emai address** (they will filter out addresses like "shuo.yang@columbia.edu" and "shuo@cs.columbia.edu").
 
@@ -86,7 +86,7 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 
 
-## 4. GPU
+## 5. GPU
 
 1. Set up the env as instructed above
 2. After setting up the env, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as above), as you can't "qlogin" to a GPU node
@@ -98,7 +98,7 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 
 
-## 5. Other notes
+## 6. Other notes
 
 1. Please send me you Github account such that I can add you to the Lab repo
 2. Please make sure to document well (progress, core algorithms and program structures) for your code (e.g., in README), to make it not only usable, but also modifiable to benefit other projects
