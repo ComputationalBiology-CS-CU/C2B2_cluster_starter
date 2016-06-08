@@ -50,10 +50,6 @@ More frequently used commands in cluster: qlogin, qsub, qstat, qdel
 
 The default quota for your "scratch" directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
 
-### 2.3. Python
-
-[Canopy](https://www.enthought.com/products/canopy/) and [Anaconda](https://www.continuum.io/downloads) are suggested to install locally in "scratch" directory, to run Python program. See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program) for setting up the env to call these locally installed Python.
-
 ### 2.4. Job submission scripts
 
 Find the following scripts for your reference. For a more detailed discussion (e.g., running an array job), see [here](http://wiki.c2b2.columbia.edu/arcs/index.php/Cluster_doc).
@@ -72,10 +68,16 @@ Please send any question to "rt@c2b2.columbia.edu" **with your uni emai address*
 
 
 
+## 3. Local Python
+
+[Canopy](https://www.enthought.com/products/canopy/) and [Anaconda](https://www.continuum.io/downloads) are suggested to install locally in "scratch" directory, to run Python program. See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program) for setting up the env to call these locally installed Python.
+
+Note that please switch to Anaconda if you find some libraries are not supported by Canopy.
 
 
 
-## 3. Install GCC locally
+
+## 4. Local GCC
 
 See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
