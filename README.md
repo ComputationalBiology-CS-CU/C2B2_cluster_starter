@@ -4,9 +4,7 @@ Basic introductions to how to use C2B2 cluster (including CUDA C/C++ program)
 
 
 
-## 1. Cluster basics
-
-### 1.1. Account
+## 1. Getting your account
 
 [Here](http://wiki.c2b2.columbia.edu/arcs/index.php/Forms) you can find the application form. It's recommended to run jobs in cluster, other than in your own computer.
 
