@@ -63,7 +63,7 @@ Find the following scripts for your reference. For a more detailed discussion (e
 3. run\_gpu.sh (GPU)
 
 
-Please pay attention to the system memory configuration, and be careful about the memory you are applying. Also, short-time jobs are easier to be allocated, so estimate the running time and submit jobs with less time requirement (the "time" option in the script).
+Please pay attention to the system memory configuration, and be careful about the memory you are applying. The same for the time you apply. So estimate the approximate running time and memory requirement before submitting your jobs (or submit trial jobs to see how much memory and time is actually needed).
 
 
 ### 2.5. Questions?
