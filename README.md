@@ -88,7 +88,7 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 1. Set up the env as instructed above
 2. After setting up the env, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as above), as you can't "qlogin" to a GPU node
-3. There are 44 GPU nodes, each having 3 GPU devices. I attached the details of these GPU's for you to get a sense of them (in "run\_gpu.sh.o9898871")
+3. There are 44 GPU nodes, each having 3 GPU devices. I attached the details of these GPU's for you to get a sense of them (in ["run_gpu.sh.o9898871"](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh.o9898871))
 4. Please compile and run [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs. As said there are at most 3 GPU devices at one GPU node, you can set "#$ -l gpu=1" from 1 to 3. but no more
 
 
