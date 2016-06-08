@@ -37,9 +37,9 @@ You need to login to the cluster, landing at "home" directory, which is not supp
 
 e.g.
 ```
-/ifs/home/c2b2/ip\_lab/sy2515/
-/ifs/data/c2b2/ip\_lab/sy2515/
-/ifs/scratch/c2b2/ip\_lab/sy2515/
+/ifs/home/c2b2/ip_lab/sy2515/
+/ifs/data/c2b2/ip_lab/sy2515/
+/ifs/scratch/c2b2/ip_lab/sy2515/
 ```
 
 Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land on a computing node, which supports computation to happen. This also means the login node doesn't support computation, but just some basic file editing operations.
