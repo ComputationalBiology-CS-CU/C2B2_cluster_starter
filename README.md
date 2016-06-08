@@ -46,11 +46,8 @@ Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land 
 
 More frequently used commands in cluster: qlogin, qsub, qstat, qdel
 
-### 2.2. Account quota
 
-The default quota for your "scratch" directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
-
-### 2.3. Job submission scripts
+### 2.2. Job submission scripts
 
 Find the following scripts for your reference. For a more detailed discussion (e.g., running an array job), see [here](http://wiki.c2b2.columbia.edu/arcs/index.php/Cluster_doc).
 
@@ -58,8 +55,12 @@ Find the following scripts for your reference. For a more detailed discussion (e
 2. [run_mt.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_mt.sh) (multi-threading)
 3. [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh) (GPU)
 
-
 Please pay attention to the system memory configuration, and be careful about the memory you are applying. The same for the time you apply. So estimate the approximate running time and memory requirement before submitting your jobs (or submit trial jobs to see how much memory and time is actually needed).
+
+
+### 2.3. Account quota
+
+The default quota for your "scratch" directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
 
 
 ### 2.4. Questions?
