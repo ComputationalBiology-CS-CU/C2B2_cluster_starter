@@ -1,6 +1,6 @@
 # C2B2_cluster_starter
 
-Basic introductions to how to use C2B2 cluster (including CUDA C/C++ program)
+Basic introductions to how to use C2B2 cluster (including CUDA C/C++ program). **Note** that this is not a detailed tutorial, but just a basic introduction to make you set up and start research works quickly.
 
 
 
@@ -31,7 +31,7 @@ Please fill in this form and email as instructed also cc-ing Prof. Pe'er. He wil
 ## 2. Sun Grid Engine (SGE) basics
 
 
-### 2.1. Login
+### 2.1. Working directory
 
 You need to login to the cluster, landing at "home" directory, which is not supposed to be the working directory. Forget about the "data" directory. We are mainly working on "scratch". Though it's reported less secure, but dropping all the scripts/codes/data there is what the lab usually do. So, work there.
 
@@ -46,7 +46,7 @@ Independently with these, you can use "qlogin" (or "qlogin -l mem=32G") to land 
 
 More frequently used commands in cluster: qlogin, qsub, qstat, qdel
 
-### 2.2. Login
+### 2.2. Account quota
 
 The default quota for your "scratch" directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
 
@@ -68,7 +68,7 @@ Please pay attention to the system memory configuration, and be careful about th
 
 ### 2.5. Questions?
 
-Please send any question to "rt@c2b2.columbia.edu".
+Please send any question to "rt@c2b2.columbia.edu" **with your uni emai address** (they will filter out addresses like "shuo.yang@columbia.edu" and "shuo@cs.columbia.edu").
 
 
 
