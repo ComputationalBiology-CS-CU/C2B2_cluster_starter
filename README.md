@@ -16,7 +16,7 @@ Some instructions about how to fill in the application form:
 2. Title -> simply student, or empty
 3. Office/Lab Room Numer --> CSB506, Morningside Campus
 4. Phone Number --> your phone number
-5. Positon: should be "Rotation Student" or "Casual"
+5. Positon: should be "Rotation Student" or "Casual"; start and end dates are the start and end of the current semester or summer
 6. ARCS/ICG Email Account - Yes/No/Forward only to Columbia Account --> you don't actually need this
 7. SharePoint Acccount - Yes/No --> you don't actually need this
 8. Cluster Account - Yes/No --> Yes!
