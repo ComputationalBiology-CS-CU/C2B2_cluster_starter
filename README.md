@@ -75,6 +75,8 @@ Please send any question to "rt@c2b2.columbia.edu" **with your uni emai address*
 
 Note that please switch to Anaconda if you find some libraries are not supported by Canopy.
 
+Note that Anaconda is preferred, since it contains an add-on for GPU Python (see [here](https://developer.nvidia.com/how-to-cuda-python)). You need "conda install accelerate" and "conda install numbapro" after you deploy your Anaconda.
+
 
 
 
@@ -93,6 +95,7 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 2. After setting up the env, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh)), as you can't "qlogin" to a GPU node
 3. There are 44 GPU nodes, each having 3 GPU devices (also 3 CPU cores associated with these GPU cores). I attached the details of these GPU's for you to get a sense of them (in [run_gpu.sh.o9898871](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh.o9898871))
 4. Please compile and run [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs. As said there are at most 3 GPU devices at one GPU node, you can set "#$ -l gpu=1" from 1 to 3. but no more
+5. Python GPU: as discussed above, please use [Anaconda](https://developer.nvidia.com/how-to-cuda-python), and you need "conda install accelerate" and "conda install numbapro" after you deploy your Anaconda.
 
 
 
