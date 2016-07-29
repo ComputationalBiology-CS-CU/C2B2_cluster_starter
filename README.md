@@ -1,12 +1,12 @@
 # C2B2_cluster_starter
 
-Basic introductions to how to use C2B2 cluster (including CUDA C/C++ program). **Note** that this is not a detailed tutorial, but just a basic introduction to make you set up and start research works quickly.
+Basic introductions to how to use C2B2 cluster (including CUDA C/C++ programming). **Note** that this post itself is not a detailed tutorial (will cite you more detailed tutorials when necessary), but just a basic introduction to make you set up and start research works quickly.
 
 
 
 ## 1. Getting your account
 
-[Here](http://wiki.c2b2.columbia.edu/arcs/index.php/Forms) you can find the application form. It's recommended to run jobs in cluster, other than in your own computer.
+[Here](http://wiki.c2b2.columbia.edu/arcs/index.php/Forms) you can find the application form. It's recommended to run jobs in cluster, other than in your own computer, since you will enjoy the benefits of submitting multiple jobs to clusters to run without waiting them to finish in front of your screen, and also save your computer's life.
 
 Some instructions about how to fill in the application form:
 
@@ -60,7 +60,7 @@ Please pay attention to the system memory configuration, and be careful about th
 
 ### 2.3. Account quota
 
-The default quota for your `scratch` directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with "df -h /ifs/scratch/c2b2/ip\_lab/sy2515". Once your program reports something like "can't write to disk", please check the left quota (this is a problem troubled me some time in the past).
+The default quota for your `scratch` directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with `df -h /ifs/scratch/c2b2/ip\_lab/sy2515`. Once your program reports something like `can't write to disk`, please check your left quota.
 
 
 ### 2.4. Questions?
@@ -71,7 +71,7 @@ Please send any question to "rt@c2b2.columbia.edu" **with your uni emai address*
 
 ## 3. Local Python
 
-[Canopy](https://www.enthought.com/products/canopy/) and [Anaconda](https://www.continuum.io/downloads) are suggested to install locally in `scratch` directory, to run Python program. See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program) for setting up the env to call these locally installed Python.
+[Canopy](https://www.enthought.com/products/canopy/) and [Anaconda](https://www.continuum.io/downloads) are suggested to install locally in `scratch` directory, to run Python program with various useful supported libraries. See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program) for setting up the env var to call these locally installed Python.
 
 Note that please switch to Anaconda if you find some libraries are not supported by Canopy.
 
@@ -91,10 +91,10 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 ## 5. GPU
 
-1. Set up the env as instructed above
-2. After setting up the env, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh)), as you can't `qlogin` to a GPU node
+1. Set up the env var as instructed above (also [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program))
+2. After setting up the env var, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh)), as you can't `qlogin` to a GPU node (GPU devices are in seperate queues at cluster nodes that are accessible only for submitted jobs but not `qlogin` users)
 3. There are 44 GPU nodes, each having 3 GPU devices (also 3 CPU cores associated with these GPU cores). I attached the details of these GPU's for you to get a sense of them (in [run_gpu.sh.o9898871](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh.o9898871))
-4. Please compile and run [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs. As said there are at most 3 GPU devices at one GPU node, you can set `#$ -l gpu=1` from 1 to 3. but no more
+4. Please compile and run [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs. As said there are at most 3 GPU devices at one GPU node, you can set `#$ -l gpu=1` from 1 to 3. but no more (as observed, even if you apply 1 GPU, you can still access 3 of them in some way)
 5. Python GPU: as discussed above, please use [Anaconda](https://developer.nvidia.com/how-to-cuda-python), and you need to `conda install accelerate` and `conda install numbapro` after you deploy your Anaconda. Please refer to [this](https://github.com/morrisyoung/CUDA_Python_starter) for more comments on Python CUDA.
 
 
