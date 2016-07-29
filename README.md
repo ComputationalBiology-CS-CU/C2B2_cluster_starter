@@ -104,9 +104,8 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 ## 6. Other notes
 
-1. Please send me you Github account such that I can add you to the Lab repo
+1. Please send me you Github account such that I can add you to the Lab Git repo (**NOTE**: please only push code to the lab repo when it's runnable, otherwise please develop in your own repo first of all)
 2. Please make sure to document well (progress, core algorithms and program structures) for your code (e.g., in README), to make it not only usable, but also modifiable to benefit other projects
-
 
 
 
