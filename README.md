@@ -60,7 +60,7 @@ Please pay attention to the system memory configuration, and be careful about th
 
 ### 2.3. Account quota
 
-The default quota for your `scratch` directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with `df -h /ifs/scratch/c2b2/ip\_lab/sy2515`. Once your program reports something like `can't write to disk`, please check your left quota.
+The default quota for your `scratch` directory should be 20GB. This is enough for running slight jobs. But if it's necessary, we can upgrade that. Check your quota with `df -h /ifs/scratch/c2b2/ip_lab/sy2515`. Once your program reports something like `can't write to disk`, please check your left quota.
 
 
 ### 2.4. Questions?
