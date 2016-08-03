@@ -87,9 +87,29 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 
 
+## 5. Multi-threading C++
+
+Once you code up your project in C/C++, you might want to spend a little more time to move onto a multi-threading version of your code. From [here](http://wiki.c2b2.columbia.edu/arcs/index.php/Cluster_doc#Additional_notes_.26_examples) you might have already realized that our cluster supports multi-threading jobs and multi-processing jobs. We've tried both, but we don't recommend the later one, since the usual coherence of our learning algorithms will probably make this less advantageous (Gradient-descent has temporal dependency, and Gibbs sampling has both temporal and spatial dependency, which makes these algorithms not suitable for working among cluster nodes). But multi-threading jobs are definitely something worth trying, and will probably give you 10 around speed-up directly compared to your sequential C/C++ (assuming 12 cores are allocated in cluster computing node).
+
+Before we start parallel, step-0 should be making your vanilla sequential version of C/C++ well organized and structured. You don't need to force yourself to be OOP, but it will definitely help if you struct your code well for example making some core algorithms and functions in a separate module. This step will help all parallel techniques we have here (multi-threading, multi-processing and GPU).
+
+A simple first-step instruction to parallel your sequential C/C++ is: to find the way we can parallel and get a sense of how faster we could be. This requires some experience, but it's definitely a learned skill. Practically when starting, you need to first of all get familiar with some distributed computing concepts, like synchronization, memory sharing, mutex, etc. Please find yourself tutorials for parallel computing, like [this one](https://computing.llnl.gov/tutorials/parallel_comp/).
+
+Finally, to be more concrete, please find the example of multi-threading C++ jobs here: [source (under working)](xxx) and [excutable (under working)](xxx). Note: you might need a newer gcc installed in cluster locally in order to compile the code, as some advanced libraries were used in this code (not sure though).
 
 
-## 5. GPU
+
+
+
+
+## 6. Hadoop or Spark?
+
+Unfortunately, the cluster doesn't support these. These require specific storage architecture and composition of the cluster and cannot be easily intergated. Pretty much they would have to buy different storage and build completely different new cluster to run hadoop or Spark.
+
+
+
+
+## 7. GPU
 
 1. Set up the env var as instructed above (also [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program))
 2. After setting up the env var, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh)), as you can't `qlogin` to a GPU node (GPU devices are in seperate queues at cluster nodes that are accessible only for submitted jobs but not `qlogin` users)
@@ -102,7 +122,7 @@ See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally).
 
 
 
-## 6. Other notes
+## 8. Other notes
 
 1. Please send me you Github account such that I can add you to the Lab Git repo (**NOTE**: please only push code to the lab repo when it's runnable, otherwise please develop in your own repo first of all)
 2. Please make sure to document well (progress, core algorithms and program structures) for your code (e.g., in README), to make it not only usable, but also modifiable to benefit other projects
