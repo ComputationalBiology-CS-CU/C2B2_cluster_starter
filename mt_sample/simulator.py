@@ -4,12 +4,15 @@ from sklearn import linear_model
 
 
 
+
 ##==== global data
 data_x = []
 data_y = []
 
 
 
+
+##==== sub-routines
 ## single point gradient
 def dev_cal(index, k_learn, b_learn):
 	global data_x
@@ -25,7 +28,6 @@ def dev_cal(index, k_learn, b_learn):
 	return (dev_k, dev_b)
 
 
-
 ## stochastic gradient
 def dev_cal_batch(k_learn, b_learn):
 	global data_x
@@ -35,7 +37,11 @@ def dev_cal_batch(k_learn, b_learn):
 	dev_b = 0
 	size_batch = 50						# TODO: the batch size in stochastic learning
 
-	"""
+	list = np.random.permutation(num_point)
+	dev_k = np.average( np.multiply( 2 * (k_learn * data_x[list[:size_batch]] + b_learn - data_y[list[:size_batch]]), data_x[list[:size_batch]] ) )
+	dev_b = np.average( 2 * (k_learn * data_x[list[:size_batch]] + b_learn - data_y[list[:size_batch]]) )
+
+	""" more readable
 	num_point = len(data_x)
 	list = np.random.permutation(num_point)
 	for i in range(size_batch):
@@ -48,12 +54,7 @@ def dev_cal_batch(k_learn, b_learn):
 	dev_b = dev_b / size_batch
 	"""
 
-	list = np.random.permutation(num_point)
-	dev_b = np.average( 2 * (k_learn * data_x[list[:size_batch]] + b_learn - data_y[list[:size_batch]]) )
-	dev_k = dev_b * x
-
 	return (dev_k, dev_b)
-
 
 
 ## total error
@@ -66,15 +67,19 @@ def error_cal(k_learn, b_learn):
 
 
 
+
 if __name__ == "__main__":
 
-
+	##===============================
 	##==== the model
+	##===============================
 	k = 3.0							# TODO: real slope
 	b = 100.0						# TODO: real intercept
 
 
+	##===============================	
 	##==== simulate data
+	##===============================
 	data_x = []						# list of tuples
 	data_y = []						# list of float
 
@@ -101,12 +106,13 @@ if __name__ == "__main__":
 
 
 
-
+	##===============================	
 	##==== GD1: int and sampling
+	##===============================
 	print "gradient descent (single round or batch-learning)"
 	k_learn = 10 * np.random.random_sample()
 	b_learn = 200 * np.random.random_sample()
-	print k_learn, b_learn
+	print "init k and b:", k_learn, b_learn
 
 	error_list = []
 	iter = 2000						# TODO: number of iterations to train
@@ -129,8 +135,9 @@ if __name__ == "__main__":
 
 
 
-
+	##===============================
 	##==== GD2: scikit learn
+	##===============================
 	print "gradient descent (scikit learn)"
 	data_x = data_x.reshape(-1, 1)
 	regr = linear_model.LinearRegression()
@@ -140,31 +147,37 @@ if __name__ == "__main__":
 
 
 
-
+	##===============================
 	##==== visualizing results
+	##===============================
 	## errors
 	x = np.arange(iter)
 	plt.plot(x, error_list)
+	plt.xlabel("iterations")
+	plt.ylabel("sum of squared errors")
+	plt.title("Training errors v.s. Iterations")
 	plt.show()
 
 
 	## models
 	# data
-	plt.plot(data_x, data_y, 'go', alpha=0.2)
+	plt.plot(data_x, data_y, 'go', alpha=0.2, label="data")
 
 	x = np.arange(100)
 	# simulator
 	y = k * x + b
-	plt.plot(x, y, 'r-')
+	plt.plot(x, y, 'r-', label="simulator")
 	# gd1
 	y = k_learn * x + b_learn
-	plt.plot(x, y, 'b-')
+	plt.plot(x, y, 'b-', label="testing algorithm")
 	# gd2
 	y = (regr.coef_)[0] * x + regr.intercept_
-	plt.plot(x, y, 'y-')
+	plt.plot(x, y, 'y-', label="Scikit-learn LinearRegression")
+	plt.legend(loc=4)
+	plt.xlabel("x")
+	plt.ylabel("y")
+	plt.title("Data, simulator and learned models")
 	plt.show()
-
-
 
 
 
