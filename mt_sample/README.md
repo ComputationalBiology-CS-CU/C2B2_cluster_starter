@@ -2,7 +2,7 @@ A linear regression (slope + intercept) example for demonstrating the multi-thre
 
 * **simulator.py**: simulating the data points, learning the model, and visualizing the learned models.
 
-* **data_x.txt** and **data_y.txt*: simulated data.
+* **data_x.txt** and **data_y.txt**: simulated data.
 
 * **Makefile**: for **mt_train.cpp** and **mt_hello.cpp**.
 
