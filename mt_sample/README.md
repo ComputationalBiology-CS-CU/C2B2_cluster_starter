@@ -1,14 +1,14 @@
 A linear regression (slope + intercept) example for demonstrating the multi-threading version C++ (stochastic gradient descent).
 
-* simulator.py: simulating the data points, learning the model, and visualizing the learned models.
+* **simulator.py**: simulating the data points, learning the model, and visualizing the learned models.
 
-* data\_x.txt and data\_y.txt: simulated data.
+* **data_x.txt** and **data_y.txt*: simulated data.
 
-* Makefile: for "mt\_train.cpp" and "mt\_hello.cpp".
+* **Makefile**: for **mt_train.cpp** and **mt_hello.cpp**.
 
-* mt\_hello.cpp (excutable: mt\_hello): Hello-world program for mt (POSIX) C++ (reference is [here](http://www.runoob.com/cplusplus/cpp-multithreading.html), in Chinese).
+* **mt_hello.cpp** (excutable: **mt_hello**): Hello-world program for mt (POSIX) C++ (reference is [here](http://www.runoob.com/cplusplus/cpp-multithreading.html), in Chinese).
 
-* mt\_train.cpp (excutable: mt\_train): a scratch for the mt C++ program (the learning algorithm).
+* **mt_train.cpp** (excutable: **mt_train**): a scratch for the mt C++ program (the learning algorithm).
 
-* run\_mt.sh: submit the above excutable in cluster.
+* **run_mt.sh**: submit the above excutable in cluster.
 
