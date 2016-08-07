@@ -104,7 +104,7 @@ Finally, to be more concrete, please find the example of multi-threading C++ job
 
 ## 6. Hadoop or Spark?
 
-Unfortunately, the cluster doesn't support these. These require specific storage architecture and composition of the cluster and cannot be easily intergated. Pretty much they would have to buy different storage and build completely different new cluster to run hadoop or Spark.
+Unfortunately, the cluster doesn't support these. These require specific storage architecture and composition of the cluster and cannot be easily intergated. Pretty much they would have to buy different storage and build completely different new cluster to run Hadoop or Spark.
 
 
 

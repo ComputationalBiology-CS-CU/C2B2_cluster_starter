@@ -10,5 +10,7 @@ A linear regression (slope + intercept) example for demonstrating the multi-thre
 
 * **mt_train.cpp** (excutable: **mt_train**): a scratch for the mt C++ program (the learning algorithm).
 
+* **error_list.txt**: training error list from **mt_train**.
+
 * **run_mt.sh**: submit the above excutable in cluster.
 

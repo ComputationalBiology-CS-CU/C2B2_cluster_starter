@@ -6,6 +6,6 @@
 
 
 
-#./mt_train
-./mt_hello
+./mt_train
+#./mt_hello
 
