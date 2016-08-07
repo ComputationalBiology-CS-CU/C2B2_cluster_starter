@@ -1,6 +1,6 @@
 # C2B2_cluster_starter
 
-Basic introductions to how to use C2B2 cluster (including CUDA C/C++ programming). **Note** that this post itself is not a detailed tutorial (will cite you more detailed tutorials when necessary), but just a basic introduction to make you set up and start research works quickly.
+Basic introductions to how to use C2B2 cluster (including multi-threading C/C++ and CUDA C/C++ programming). **Note** that this post itself is not a detailed tutorial (will cite you more detailed tutorials when necessary), but just a basic introduction to make you set up and start research works quickly.
 
 
 
