@@ -6,7 +6,7 @@ Basic introductions to how to use C2B2 cluster (including multi-threading C/C++ 
 
 ## 1. Getting your account
 
-[Here](http://wiki.c2b2.columbia.edu/arcs/index.php/Forms) you can find the application form. It's recommended to run jobs in cluster, other than in your own computer, since you will enjoy the benefits of submitting multiple jobs to clusters to run without waiting them to finish in front of your screen, and also save your computer's life.
+[Here](http://wiki.c2b2.columbia.edu/arcs/index.php/Forms) you can find the application form. It's recommended to run well-coded programs and long jobs in cluster, other than in your own computer, since you will enjoy the benefits of submitting multiple jobs to clusters to run without waiting them to finish in front of your screen, and also save your computer's life.
 
 Some instructions about how to fill in the application form:
 
@@ -95,7 +95,7 @@ Before we start parallel, step-0 should be making your vanilla sequential versio
 
 A simple first-step instruction to parallel your sequential C/C++ is: to find the way we can parallel and get a sense of how faster we could be. This requires some experience, but it's definitely a learned skill. Practically when starting, you need to first of all get familiar with some distributed computing concepts, like synchronization, memory sharing, mutex, etc. Please find yourself tutorials for parallel computing, like [this one](https://computing.llnl.gov/tutorials/parallel_comp/).
 
-Finally, to be more concrete, please find the example of multi-threading C++ jobs [here](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/tree/master/mt_example). Note: you might need a newer gcc installed in cluster locally in order to compile the code, as some advanced libraries were used in this code (not sure though).
+Finally, to be more concrete, please find the example of multi-threading C++ jobs [here](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/tree/master/mt_example). Note: you might need a newer gcc installed in cluster locally (See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally)) in order to compile the code, as some new C++ libraries might be used in this code (not sure though).
 
 
 
@@ -109,9 +109,9 @@ Unfortunately, the cluster doesn't support these. These require specific storage
 
 
 
-## 7. GPU
+## 7. GPU (Nvidia CUDA)
 
-1. Set up the env var as instructed above (also [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program))
+1. Set up the env var as instructed above ([here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally#6-compile-and-run-c-program))
 2. After setting up the env var, you get the nvcc compiler. Please note that, you can only compile CUDA C/C++ code in computing node, other than the login node. Also, note that after compiling, you can only run GPU jobs by submitting them into the GPU nodes (script as [run_gpu.sh](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh)), as you can't `qlogin` to a GPU node (GPU devices are in seperate queues at cluster nodes that are accessible only for submitted jobs but not `qlogin` users)
 3. There are 44 GPU nodes, each having 3 GPU devices (also 3 CPU cores associated with these GPU cores). I attached the details of these GPU's for you to get a sense of them (in [run_gpu.sh.o9898871](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh.o9898871))
 4. Please compile and run [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs. As said there are at most 3 GPU devices at one GPU node, you can set `#$ -l gpu=1` from 1 to 3. but no more (as observed, even if you apply 1 GPU, you can still access 3 of them in some way)
@@ -124,8 +124,7 @@ Unfortunately, the cluster doesn't support these. These require specific storage
 
 ## 8. Other notes
 
-1. Please send me you Github account such that I can add you to the Lab Git repo (**NOTE**: please only push code to the lab repo when it's runnable, otherwise please develop in your own repo first of all)
+1. Please send me (Shuo, shuo@cs.columbia.edu) your Github account such that I can add you to the Lab Git repo (**NOTE**: please only push code to the lab repo when it's runnable, otherwise please develop in your own repo first of all)
 2. Please make sure to document well (progress, core algorithms and program structures) for your code (e.g., in README), to make it not only usable, but also modifiable to benefit other projects
-
 
 
