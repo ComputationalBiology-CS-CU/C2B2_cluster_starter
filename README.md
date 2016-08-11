@@ -95,7 +95,7 @@ Before we start parallel, step-0 should be making your vanilla sequential versio
 
 A simple first-step instruction to parallel your sequential C/C++ is: to find the way we can parallel and get a sense of how faster we could be. This requires some experience, but it's definitely a learned skill. Practically when starting, you need to first of all get familiar with some distributed computing concepts, like synchronization, memory sharing, mutex, etc. Please find yourself tutorials for parallel computing, like [this one](https://computing.llnl.gov/tutorials/parallel_comp/).
 
-Finally, to be more concrete, please find the example of multi-threading C++ jobs [here](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/tree/master/mt_example). Note: you might need a newer gcc installed in cluster locally (See [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally)) in order to compile the code, as some new C++ libraries might be used in this code (not sure though).
+Finally, to be more concrete, please find the example of multi-threading C++ jobs [here](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/tree/master/mt_example). Note: you might need a newer gcc installed in cluster locally (see [here](https://github.com/ComputationalBiology-CS-CU/gcc_install_locally)) in order to compile the code, as some new C++ libraries might be used in this code (not sure though).
 
 
 
