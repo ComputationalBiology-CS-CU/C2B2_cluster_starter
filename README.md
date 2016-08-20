@@ -116,7 +116,7 @@ Unfortunately, the cluster doesn't support these. These require specific storage
 3. There are 44 GPU nodes, each having 3 GPU devices (also 3 CPU cores associated with these GPU cores). I attached the details of these GPU's for you to get a sense of them (in [run_gpu.sh.o9898871](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/blob/master/run_gpu.sh.o9898871))
 4. Please compile and run [CUDA examples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples) to get familiar with running GPU jobs (since the compilation of all examples will take a while, it's recommended to submit a job with `make` as the command to run). As said there are at most 3 GPU devices at one GPU node, you can set `#$ -l gpu=1` from 1 to 3, but no more (as observed, even if you apply 1 GPU, you can still access 3 of them in some way)
 5. If you modify CUDA examples in order to build some functions for your original C++ program, you might need some header files that are located in `./common/inc/` of the CUDA example folder
-6. Please see [here](xxx) for an example (matrix multiplication) with some CUDA programming tips
+6. Please see [here](https://github.com/ComputationalBiology-CS-CU/C2B2_cluster_starter/tree/master/gpu_example) for an example (matrix multiplication) with some CUDA programming tips
 7. Python GPU: as discussed above, please use [Anaconda](https://developer.nvidia.com/how-to-cuda-python), and you need to `conda install accelerate` and `conda install numbapro` after you deploy your Anaconda. Please refer to [this](https://github.com/morrisyoung/CUDA_Python_starter) for more comments on Python CUDA.
 
 
