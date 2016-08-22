@@ -1,3 +1,5 @@
+Courses: [here](http://cs.nyu.edu/courses/fall15/CSCI-GA.3033-004/), [here](http://courses.cms.caltech.edu/cs179/), [here](https://developer.nvidia.com/educators/existing-courses#2) and Google by yourself...
+
 I find [this](http://www.es.ele.tue.nl/~mwijtvliet/5KK73/?page=mmcuda) useful to lean various matrix multiplication optimization techniques (and by the way learn more about GPU hardware details).
 
 
