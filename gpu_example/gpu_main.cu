@@ -228,8 +228,10 @@ void gpu_main()
 
 	int block_size = 32;										// 1024 (32*32) is the current block size limit
 
-	dim3 dimsA(5*2*block_size, 5*2*block_size, 1);				// TODO: change scales of input
-	dim3 dimsB(5*4*block_size, 5*2*block_size, 1);				// TODO: change scales of input
+	//dim3 dimsA(5*2*block_size, 5*2*block_size, 1);			// TODO: change scales of input
+	//dim3 dimsB(5*4*block_size, 5*2*block_size, 1);			// TODO: change scales of input
+	dim3 dimsA(15*block_size, 5*2*block_size, 1);				// TODO: change scales of input
+	dim3 dimsB(5*4*block_size, 15*block_size, 1);				// TODO: change scales of input
 	printf("MatrixA(%d,%d), MatrixB(%d,%d)\n", dimsA.x, dimsA.y, dimsB.x, dimsB.y);
 
 	int matrix_result = matrixMultiply(block_size, dimsA, dimsB);
