@@ -232,50 +232,11 @@ build: main
 
 
 
-
-#$(OBJS): $(SRCS)
-#	g++ -c $*.cpp $(GOPT)
-##	$(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(OPT) -o $@ -c $<
-##	g++ $(INCLUDES) $(GOPT) -o $@ -c $<
-#
-#opt_subroutine.o:opt_subroutine.cu
-##	$(NVCC) -c opt_subroutine.cu $(NVOPT)
-#	$(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(OPT) -o $@ -c $<
-#
-#main:	$(OBJS) opt_subroutine.o
-##	$(NVCC) -o $(EXECUTABLE) $(OBJS) opt_subroutine.o $(OPT) $(LIBS)
-#	$(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) $(LIBRARIES) $(OPT) -dlink opt_subroutine.o -o gpuCode.o
-#	g++ $(GOPT) gpuCode.o $(OBJS) opt_subroutine.o -lcudart -o $(EXECUTABLE)
-
-
-
-
-gpu_main.o:gpu_main.cu
+$(OBJS_GPU):$(SRCS_GPU)
 	$(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(OPT) -o $@ -c $<
 
-main:	gpu_main.o
-	g++ -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -L/nfs/apps/cuda/7.5.18/lib64 -lcuda -lcudart $(SRCS) gpu_main.o
-
-
-
-
-#$(OBJS_GPU):$(SRCS_GPU)
-#	$(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(OPT) -o $@ -c $<
-
-
-#main:	$(OBJS_GPU)
-#	g++ -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -lcuda -lcudart $(SRCS) opt_subroutine.o
-#	g++ -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -L/nfs/apps/cuda/7.5.18/lib64 -lcuda -lcudart $(SRCS) $(OBJS_GPU)
-
-
-
-#opt_subroutine.o:opt_subroutine.cu
-#	$(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(OPT) -o $@ -c $<
-#
-#main:	opt_subroutine.o
-##	g++ -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -lcuda -lcudart $(SRCS) opt_subroutine.o
-#	g++ -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -L/nfs/apps/cuda/7.5.18/lib64 -lcuda -lcudart $(SRCS) opt_subroutine.o
-
+main:$(OBJS_GPU)
+	$(HOST_COMPILER) -o $(EXECUTABLE) $(ALL_LDFLAGS) $(GOPT) -L/nfs/apps/cuda/7.5.18/lib64 -lcuda -lcudart $(SRCS) $<
 
 
 
