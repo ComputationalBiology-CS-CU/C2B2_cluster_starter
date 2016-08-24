@@ -2,6 +2,7 @@ Courses: [here](http://cs.nyu.edu/courses/fall15/CSCI-GA.3033-004/), [here](http
 
 I find [this](http://www.es.ele.tue.nl/~mwijtvliet/5KK73/?page=mmcuda) useful to lean various matrix multiplication optimization techniques (and by the way learn more about GPU hardware details).
 
+Since [cuBLAS](https://developer.nvidia.com/cublas) is more convenient to use for some BLAS routines and also deeply optimized on top of CUDA, I also attach a slightly modified cuBLAS matrix multiplication example (from the [CUDA samples](http://docs.nvidia.com/cuda/cuda-samples/index.html#getting-cuda-samples)) in this dir. See [here](https://developer.nvidia.com/sites/default/files/akamai/cuda/files/Misc/mygpu.pdf) for an useful doc introducing cuBLAS routines in more details.
 
 
 GPU tips:
